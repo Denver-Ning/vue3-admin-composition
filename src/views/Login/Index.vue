@@ -45,8 +45,8 @@ export default defineComponent({
   setup() {
     const router = useRouter()
     const userLogin = reactive({
-      account: '',
-      pwd: ''
+      account: 'admin',
+      pwd: 'admin'
     })
     const isActive = ref(false)
     const userRegister = reactive({
@@ -58,7 +58,12 @@ export default defineComponent({
       login() {
         const { account, pwd } = userLogin
         console.log('登陆', account, pwd)
-        router.push('/home')
+        if (account === '' && pwd === '') {
+          console.log('请输入账号密码');
+          return
+        } else {
+          router.push('/dashboard')
+        }
       },
       signUpBtn() {
         isActive.value = true

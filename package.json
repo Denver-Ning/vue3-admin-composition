@@ -7,8 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "echarts": "^5.2.1",
     "element-plus": "^1.1.0-beta.15",
     "less": "^4.1.1",
+    "mitt": "^3.0.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.11"
   },
