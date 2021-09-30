@@ -36,17 +36,17 @@
       </div>
       <i class="el-icon-edit"></i>
     </div>
-    <Vcode :show="isShow" :imgs="imgs" @fail="onFail" @success="onSuccess" @close="onClose" />
+    <!-- <Vcode :show="isShow" @fail="onFail" @success="onSuccess" @close="onClose" /> -->
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, toRefs, ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
-import Vcode from "vue3-puzzle-vcode";
+// import Vcode from "vue3-puzzle-vcode";
 import Img from '@/assets/Vcode.png'
 export default defineComponent({
   components: {
-    Vcode
+    // Vcode
   },
   setup() {
     const router = useRouter()
@@ -62,7 +62,7 @@ export default defineComponent({
         email: '',
         password: ''
       },
-      imgs:[Img]
+      imgs: [Img]
     })
     const methods = reactive({
       login() {
@@ -72,6 +72,7 @@ export default defineComponent({
           console.log('请输入账号密码');
           return
         } else {
+          router.push('/dashboard')
           dataMap.isShow = true
         }
       },
@@ -83,18 +84,19 @@ export default defineComponent({
       },
       register() {
         const { name, email, password } = dataMap.userRegister
-        if (name && email && password) console.log('注册成功')
+        if (name && email && password) {
+        }
         else {
           console.log('注册失败')
         }
       },
-      onClose(){
+      onClose() {
         dataMap.isShow = false
       },
-      onFail(){
+      onFail() {
         console.log('验证失败');
       },
-      onSuccess(){
+      onSuccess() {
         methods.onClose()
         router.push('/dashboard')
       }

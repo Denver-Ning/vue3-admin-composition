@@ -13,28 +13,74 @@
       text-color="#fff"
       router
       :collapse-transition="true"
+      unique-opened
     >
       <el-menu-item index="/dashboard">
         <i class="iconfont icon-shouye"></i>
-        <span>首页</span>
+        <span>{{t('silder.Dashboard')}}</span>
       </el-menu-item>
       <el-sub-menu index="/1">
         <template #title>
           <i class="iconfont icon-zujian"></i>
-          <span>组件</span>
+          <span>{{t('silder.Components')}}</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="/dashboard/hh">item one</el-menu-item>
+          <el-menu-item index="/draggable-dialog">{{t('silder.components.DraggableDialog')}}</el-menu-item>
           <el-menu-item index>item one</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
       <el-sub-menu index="2">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>图表</span>
+          <span>{{t('silder.Charts')}}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/brokenLine">折线图</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="3">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{t('silder.pageFunction')}}</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/">item</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="4">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{t('silder.page')}}</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/">item</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="5">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{t('silder.introPage')}}</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/">item</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="6">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{t('silder.Excel')}}</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/">item</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="7">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{t('silder.systemManagement')}}</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/">item</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
     </el-menu>
@@ -43,8 +89,10 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, reactive, toRefs, onBeforeUnmount } from 'vue'
 import bus from "../libs/bus"
+import { useI18n } from 'vue-i18n'
 export default defineComponent({
   setup(props: any, context: any) {
+    const { t } = useI18n()
     const methods = reactive({
       isCollapse: false
     })
@@ -58,6 +106,7 @@ export default defineComponent({
       bus.off('getCollapse' as string, getCollapse as any)
     })
     return {
+      t,
       ...toRefs(methods)
     };
   },
@@ -90,7 +139,7 @@ export default defineComponent({
       margin-left: 5px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
 
@@ -98,7 +147,7 @@ export default defineComponent({
     border-right: none;
   }
 }
-.iconfont{
+.iconfont {
   margin-right: 10px;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
