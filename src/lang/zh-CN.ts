@@ -8,8 +8,11 @@ export default {
     introPage:'引导页',
     Excel:'Excel',
     systemManagement:'系统管理',
+    menu:'多级菜单',
     components:{
-      DraggableDialog:'可拖拽弹窗'
+      DraggableDialog:'可拖拽弹窗',
+      tinymece:'富文本编辑器',
+      DraggableList:'可拖拽列表'
     }
   },
 }

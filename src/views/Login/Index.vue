@@ -40,7 +40,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, toRefs, ref, reactive } from 'vue';
+import { defineComponent, toRefs, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 // import Vcode from "vue3-puzzle-vcode";
 import Img from '@/assets/Vcode.png'

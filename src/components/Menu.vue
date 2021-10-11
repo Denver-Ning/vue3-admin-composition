@@ -17,22 +17,23 @@
     >
       <el-menu-item index="/dashboard">
         <i class="iconfont icon-shouye"></i>
-        <span>{{t('silder.Dashboard')}}</span>
+        <span>{{ t('silder.Dashboard') }}</span>
       </el-menu-item>
-      <el-sub-menu index="/1">
+      <el-sub-menu index="1">
         <template #title>
           <i class="iconfont icon-zujian"></i>
-          <span>{{t('silder.Components')}}</span>
+          <span>{{ t('silder.Components') }}</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="/draggable-dialog">{{t('silder.components.DraggableDialog')}}</el-menu-item>
-          <el-menu-item index>item one</el-menu-item>
+          <el-menu-item index="/draggable-dialog">{{ t('silder.components.DraggableDialog') }}</el-menu-item>
+          <el-menu-item index="/rich-text">{{t('silder.components.tinymece')}}</el-menu-item>
+          <el-menu-item index="/draggable-list">{{t('silder.components.DraggableList')}}</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
       <el-sub-menu index="2">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.Charts')}}</span>
+          <span>{{ t('silder.Charts') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/brokenLine">折线图</el-menu-item>
@@ -41,7 +42,7 @@
       <el-sub-menu index="3">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.pageFunction')}}</span>
+          <span>{{ t('silder.pageFunction') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/">item</el-menu-item>
@@ -50,7 +51,7 @@
       <el-sub-menu index="4">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.page')}}</span>
+          <span>{{ t('silder.page') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/">item</el-menu-item>
@@ -59,7 +60,7 @@
       <el-sub-menu index="5">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.introPage')}}</span>
+          <span>{{ t('silder.introPage') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/">item</el-menu-item>
@@ -68,7 +69,7 @@
       <el-sub-menu index="6">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.Excel')}}</span>
+          <span>{{ t('silder.Excel') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/">item</el-menu-item>
@@ -77,10 +78,30 @@
       <el-sub-menu index="7">
         <template #title>
           <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
-          <span>{{t('silder.systemManagement')}}</span>
+          <span>{{ t('silder.systemManagement') }}</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/">item</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="8">
+        <template #title>
+          <i class="iconfont icon-tubiao-zhuzhuangtu"></i>
+          <span>{{ t('silder.menu') }}</span>
+        </template>
+        <el-sub-menu index="8-1">
+          <template #title>
+            <span>menu-1</span>
+          </template>
+          <el-sub-menu index="8-1-1">
+            <template #title>
+              <span>menu-1-1</span>
+            </template>
+            <el-menu-item index="/">meun</el-menu-item>
+          </el-sub-menu>
+        </el-sub-menu>
+        <el-menu-item-group>
+          <el-menu-item index="/">meun-2</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
     </el-menu>

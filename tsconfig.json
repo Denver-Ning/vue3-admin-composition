@@ -10,7 +10,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     // "suppressImplicitAnyIndexErrors":true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/apis/switch.js"]
 }

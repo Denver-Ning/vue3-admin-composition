@@ -87,6 +87,11 @@
   resolved "https://registry.nlark.com/@popperjs/core/download/@popperjs/core-2.10.1.tgz?cache=0&sync_timestamp=1630646793367&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40popperjs%2Fcore%2Fdownload%2F%40popperjs%2Fcore-2.10.1.tgz#728ecd95ab207aab8a9a4e421f0422db329232be"
   integrity sha1-co7NlasgequKmk5CHwQi2zKSMr4=
 
+"@tinymce/tinymce-vue@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.npmmirror.com/@tinymce/tinymce-vue/download/@tinymce/tinymce-vue-4.0.4.tgz#b47934f2d1e106ac9af7fa9ba0316a8c96ed314c"
+  integrity sha1-tHk08tHhBqya9/qboDFqjJbtMUw=
+
 "@types/node@^16.9.6":
   version "16.9.6"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.9.6.tgz?cache=0&sync_timestamp=1632251161935&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.9.6.tgz"
@@ -944,6 +949,11 @@ sourcemap-codec@^1.4.4:
   resolved "https://registry.nlark.com/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz"
   integrity sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
 
+tinymce@^5.9.2:
+  version "5.9.2"
+  resolved "https://registry.nlark.com/tinymce/download/tinymce-5.9.2.tgz#c56a1d7800ac23026fbe6e0fcf444c0f157ccafe"
+  integrity sha1-xWodeACsIwJvvm4Pz0RMDxV8yv4=
+
 to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/to-fast-properties/download/to-fast-properties-2.0.0.tgz"
@@ -1125,6 +1135,13 @@ vue-demi@*:
   resolved "https://registry.nlark.com/vue-demi/download/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
   integrity sha1-YQGZL+RyTPVjQBihbpU/MFLpTio=
 
+vue-draggable-next@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/vue-draggable-next/download/vue-draggable-next-2.1.0.tgz#c5c0c7deef2f092278fc9e97bd3f668c43800896"
+  integrity sha1-xcDH3u8vCSJ4/J6XvT9mjEOACJY=
+  dependencies:
+    vue-router "4"
+
 vue-i18n@^9.2.0-beta.7:
   version "9.2.0-beta.7"
   resolved "https://registry.npmmirror.com/vue-i18n/download/vue-i18n-9.2.0-beta.7.tgz#d1f68759873c4f5ea2db5c08877afd8f26482430"
@@ -1135,7 +1152,7 @@ vue-i18n@^9.2.0-beta.7:
     "@intlify/vue-devtools" "9.2.0-beta.7"
     "@vue/devtools-api" "^6.0.0-beta.13"
 
-vue-router@^4.0.11:
+vue-router@4, vue-router@^4.0.11:
   version "4.0.11"
   resolved "https://registry.nlark.com/vue-router/download/vue-router-4.0.11.tgz?cache=0&sync_timestamp=1628495505697&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-router%2Fdownload%2Fvue-router-4.0.11.tgz#cd649a0941c635281763a20965b599643ddc68ed"
   integrity sha1-zWSaCUHGNSgXY6IJZbWZZD3caO0=

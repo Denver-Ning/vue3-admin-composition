@@ -1,22 +1,22 @@
 function closeFullScreen() {
   if (document.exitFullscreen) {
     document.exitFullscreen()
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen()
-  } else if (document.webkitCancelFullScreen) {
-    document.webkitCancelFullScreen()
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen()
+  } else if ((document as any).mozCancelFullScreen) {
+    (document as any).mozCancelFullScreen()
+  } else if ((document as any).webkitCancelFullScreen) {
+    (document as any).webkitCancelFullScreen()
+  } else if ((document as any).msExitFullscreen) {
+    (document as any).msExitFullscreen()
   }
 }
 function fullScreen() {
   var docElm = document.documentElement
   if (docElm.requestFullscreen) {
     docElm.requestFullscreen()
-  } else if (docElm.mozRequestFullScreen) {
-    docElm.mozRequestFullScreen()
-  } else if (docElm.webkitRequestFullScreen) {
-    docElm.webkitRequestFullScreen()
+  } else if ((docElm as any).mozRequestFullScreen) {
+    (docElm as any).mozRequestFullScreen()
+  } else if ((docElm as any).webkitRequestFullScreen) {
+    (docElm as any).webkitRequestFullScreen()
   }
 }
 

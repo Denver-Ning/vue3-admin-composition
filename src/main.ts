@@ -9,6 +9,7 @@ import utils from './utils/index'
 import VueI18n from './lang'
 import * as directives from './directives'
 
+
 const app = createApp(App)
 
 // 自定义指令

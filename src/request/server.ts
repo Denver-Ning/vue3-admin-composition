@@ -20,6 +20,7 @@ serive.interceptors.request.use((config) => {
   startLoading()
   return config
 }, function (error) {
+  endLoading()
   return Promise.reject(error)
 })
 
@@ -27,6 +28,7 @@ serive.interceptors.response.use((config) => {
   endLoading()
   return config
 }, function (error) {
+  endLoading()
   return Promise.reject(error)
 })
 
