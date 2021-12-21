@@ -40,10 +40,12 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, toRefs, reactive } from 'vue';
+import { defineComponent, toRefs, reactive, h } from 'vue';
 import { useRouter } from 'vue-router';
 // import Vcode from "vue3-puzzle-vcode";
-import Img from '@/assets/Vcode.png'
+// import Img from '@/assets/Vcode.png'
+import { ElNotification, ElLoading } from 'element-plus';
+import type { Loign,Register } from './login'
 export default defineComponent({
   components: {
     // Vcode
@@ -53,27 +55,45 @@ export default defineComponent({
     const dataMap = reactive({
       isShow: false,
       isActive: false,
-      userLogin: {
-        account: 'admin',
-        pwd: 'admin'
-      },
+      userLogin: {} as Loign,
       userRegister: {
         name: '',
         email: '',
         password: ''
-      },
-      imgs: [Img]
+      } as Register,
+      // imgs: [Img]
     })
     const methods = reactive({
       login() {
+        const loading = ElLoading.service({
+          lock: true,
+          text: '加载中...',
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)',
+        })
         const { account, pwd } = dataMap.userLogin
-        console.log('登陆', account, pwd)
         if (account === '' && pwd === '') {
           console.log('请输入账号密码');
+          loading.close()
           return
         } else {
+          if (account !== 'admin' || pwd !== 'admin') {
+            ElNotification.error({
+              title: 'Error',
+              message: 'This is account or password is error',
+              type: 'error',
+            })
+            loading.close()
+            return
+          }
           router.push('/dashboard')
           dataMap.isShow = true
+          ElNotification.success({
+            title: 'Delver丶ning',
+            message: h('p', { style: 'color:green' }, '努力学习中ing.......',),
+            duration: 0,
+          })
+          loading.close()
         }
       },
       signUpBtn() {
@@ -97,7 +117,7 @@ export default defineComponent({
         console.log('验证失败');
       },
       onSuccess() {
-        methods.onClose()
+        methods.onClose() 
         router.push('/dashboard')
       }
     })

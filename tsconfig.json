@@ -11,7 +11,12 @@
     "esModuleInterop": true,
     // "suppressImplicitAnyIndexErrors":true,
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["element-plus/global"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/apis/switch.js"]
 }
